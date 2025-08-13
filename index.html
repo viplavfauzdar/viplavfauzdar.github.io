@@ -2,13 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=https://viplavfauzdar.com/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Redirecting…</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, sans-serif;
+      background-color: #0f172a; /* Dark slate (matches dark mode) */
+      color: white;
+      opacity: 1;
+      transition: opacity 0.8s ease;
+    }
+  </style>
 </head>
 <body>
-  <p>If you are not redirected, <a href="https://viplavfauzdar.com/">click here</a>.</p>
+  <div>
+    <h1>Redirecting to new site…</h1>
+    <p><a href="https://viplavfauzdar.com" style="color:#93c5fd">Click here</a> if it doesn't happen automatically.</p>
+  </div>
+
   <script>
-    window.location.href = "https://viplavfauzdar.com/";
+    setTimeout(() => {
+      document.body.style.opacity = 0;
+      setTimeout(() => {
+        window.location.href = "https://viplavfauzdar.com";
+      }, 800); // matches fade duration
+    }, 1000); // delay before fade
   </script>
 </body>
 </html>
